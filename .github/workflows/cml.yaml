@@ -13,8 +13,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt      
           dvc repro
-          dvc metrics diff --show-md master > report.md
-
+          echo "## Model Metrics" > report.md
+          cat metrics.txt >> report.md
           echo "## Validating results by region"
           echo '![](./by_region.png )' >> report.md
           cml comment create report.md
