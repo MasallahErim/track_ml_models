@@ -15,7 +15,7 @@ jobs:
           dvc repro 
 
           echo "## METRİCS RESULTS"
-          echo metrics.json >> report.md
+          dvc metrics diff --show-md master > report.md
 
           echo "## Validating results by region"
           echo '![](./by_region.png )' >> report.md
