@@ -13,5 +13,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt      
           dvc repro 
+
+          echo "## METRİCS RESULTS"
+          echo metrics.json >> report.md
+
+          echo "## Validating results by region"
           echo '![](./by_region.png )' >> report.md
           cml comment create report.md
