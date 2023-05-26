@@ -2,4 +2,5 @@ wget
 scikit-learn
 pandas
 seaborn
+opendatasets
 matplotlib
